@@ -3,14 +3,16 @@
 
 int main() {
     char *ptr;
-
-    ptr = (char *)malloc(100);
+    
+    ptr = (char *)malloc(10);
 
     if (ptr == NULL) {
         return 1;
     }
 
-    ptr[0] = 'A';
+    ptr[0] = 'B';
+
+    free(ptr);
 
     printf("%c\n", ptr[0]);
 
